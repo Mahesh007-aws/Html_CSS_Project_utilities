@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  /* margin: 0; */
+  padding: 0;
+}
+
+body {
+  font-family: "Amatic SC", "cursive";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* width: 100vw; */
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+
+  /* height: 100%; */
+  width: 90vw;
+  /* text-align: center; */
+  color: aliceblue;
+  vertical-align: text-top;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  /* filter: brightness(0.8); */
+}
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.5s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    /* overflow: visible; */
+    /* height: 100vh; */
+  }
+  .panel:nth-child(4),
+  .panel:last-child {
+    display: none;
+  }
+}
