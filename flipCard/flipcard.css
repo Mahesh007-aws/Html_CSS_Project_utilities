@@ -1,0 +1,60 @@
+.container {
+  width: 300px;
+  height: 500px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+  height: 100vh;
+  background: linear-gradient(45deg, #e306ca, rgb(21, 21, 212));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  /* background-color: #3a3a3a; */
+}
+.front {
+  background-image: url("https://source.unsplash.com/user/wsanter");
+  box-shadow: 0 0 1em 0.5em antiquewhite inset;
+}
+.front,
+.back {
+  border-radius: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+.back {
+  background-color: #3a3a3a;
+  transform: rotateY(180deg);
+  color: azure;
+  text-align: center;
+  box-shadow: 0 0 1em 2px rgb(240, 238, 247);
+}
+
+p {
+  margin: 3rem auto;
+  padding: 1rem;
+}
