@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", "Roboto", serif;
+  background-color: #222;
+
+  overflow-x: hidden;
+  margin: 0;
+}
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  transition: transform 0.5s linear;
+}
+.show-nav {
+  transform: rotate(-25deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  /* position: absloute; */
+  /* transition: transform 0.5s; */
+}
+
+.circle button {
+  position: absolute;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+.circle button:focus {
+  outline: none;
+}
+.content {
+  position: relative;
+  max-width: 1000px;
+  margin: 20px auto;
+  line-height: 1.5;
+  z-index: 2;
+}
+#open {
+  top: 60%;
+}
+#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+nav {
+  position: fixed;
+  color: #fff;
+  bottom: 40px;
+  left: 0;
+  /* z-index: 1; */
+}
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+  /* transform: rotate(-20deg); */
+}
+nav ul li {
+  margin: 1rem 0;
+  border-bottom: 1px solid #fff;
+  padding: 5px;
+  letter-spacing: 5px;
+  cursor: pointer;
+  transform: translate(-120%);
+  transition: transform 1sec ease;
+}
+
+ul li + li {
+  transform: translate(-150%);
+  margin-left: 15px;
+}
+ul li:last-child {
+  transform: translate(-200%);
+  margin-left: 30px;
+}
+.container.show-nav + nav li {
+  transform: translateX(0);
+  /* transition: transform 1sec ease 0.3s;
+     */
+  transition-delay: 0.3s;
+}
