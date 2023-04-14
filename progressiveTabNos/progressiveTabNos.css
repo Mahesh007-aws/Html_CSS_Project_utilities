@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto&display=swap");
+
+body {
+  background-color: oldlace;
+  font-family: "Roboto", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 350px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.progress-container::before {
+  content: " ";
+  background-color: #a0a0a0;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  transform: translateY(50%);
+  z-index: -1;
+}
+.progress {
+  background-color: blue;
+  height: 5px;
+  width: 0%;
+  position: absolute;
+  top: 30%;
+  transform: translateY(50%);
+  z-index: -1;
+  transition: 0.5s ease;
+}
+
+.circle {
+  background-color: rgb(154, 222, 219);
+  height: 20px;
+  width: 20px;
+  border: 2px solid rgb(233, 64, 221);
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+.active {
+  border-color: blue;
+  box-shadow: 0 0 5px 2px blueviolet;
+}
+
+.btn {
+  color: white;
+  font-size: 1em;
+  background-color: blueviolet;
+  margin-left: 20px;
+  border-radius: 1px 10px;
+  padding: 0.5em;
+  cursor: pointer;
+}
+.btn.active {
+  transform: translate(0.98);
+}
+.btn:focus {
+  outline: 0;
+}
+.btn[disabled] {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
