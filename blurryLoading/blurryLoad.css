@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Roboto&display=swap");
+
+body {
+  background-color: oldlace;
+  font-family: "Ubuntu";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.bg {
+  background-image: url("https://source.unsplash.com/random/?ferrari,car");
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vw + 60px);
+  z-index: -1;
+  filter: blur(60px);
+  object-fit: cover;
+}
+
+.loading-txt {
+  color: white;
+  font-size: 50px;
+}
