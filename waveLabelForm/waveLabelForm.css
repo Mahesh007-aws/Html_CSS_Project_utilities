@@ -1,0 +1,98 @@
+/* Remove default margin and border properties */
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+  /* box-sizing: border-box; */
+}
+
+/* Import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Poppins&display=swap");
+
+/* Set the font family and size for the body */
+
+/* Center the content of the body using flex */
+body {
+  background: linear-gradient(180deg, orange, white, green);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: blue;
+}
+input {
+  display: block;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid rgb(168, 60, 60);
+  margin: 1rem;
+  padding: 25px 0 0 0;
+  font-size: 18px;
+}
+
+.container h1 {
+  text-align: center;
+}
+.container {
+  /* background-color: lightskyblue; */
+  border: 2px solid rgba(50, 50, 197, 0.937);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 2px 3px 5px 2px blue, inset -2px -3px 5px 2px blue;
+}
+a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(236, 34, 132);
+}
+a:hover {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+p {
+  display: inline;
+}
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+.form-control input,
+.form-control input:valid {
+  outline: 0;
+}
+button {
+  padding: 10px 0;
+  width: 100%;
+  margin: 10px 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.btn:hover {
+  outline: 0;
+  color: blueviolet;
+  box-shadow: 2px 2px 5px blue;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.form-control label {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+
+.form-control label span {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-30px);
+}
