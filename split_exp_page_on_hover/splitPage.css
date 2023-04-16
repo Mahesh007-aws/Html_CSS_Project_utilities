@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: oldlace;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  color: white;
+  margin: 0;
+}
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+}
+
+.container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container.playstation::before {
+  content: "";
+  background-color: rgba(83, 83, 238, 0.6);
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+}
+
+.playstation {
+  /* position: absolute; */
+  background: url("https://source.unsplash.com/random/?playstation5,videogaming");
+  background-size: cover;
+  /* overflow: hidden; */
+  /* background-color: rgba(55, 84, 213, 0.996); */
+}
+h1,
+.btn {
+  font-size: 2rem;
+  position: relative;
+  color: white;
+}
+.xbox {
+  background-image: url("https://source.unsplash.com/random/?Xbox,gaming");
+}
+.container.xbox::before {
+  content: "";
+  background-color: rgba(43, 43, 30, 0.7);
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+}
+.btn {
+  padding: 1rem;
+  background: transparent;
+
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px 2px white;
+}
