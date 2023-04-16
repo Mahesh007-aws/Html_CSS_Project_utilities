@@ -1,22 +1,30 @@
-/* Remove default margin and border properties */ 
-* { 
-	margin: 0; 
-	padding: 0; 
-	border: 0; 
-} 
- 
-/* Import fonts from Google Fonts */ 
- 
-/* Set the font family and size for the body */ 
-body { 
-	font-family: 'Ubuntu', sans-serif; 
-	font-size: 16px; 
-} 
- 
-/* Center the content of the body using flex */ 
-body { 
-	display: flex; 
-	align-items: center; 
-	justify-content: center; 
-	height: 100vh; 
-} 
+/* Remove default margin and border properties */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Center the content of the body using flex */
+body {
+  background: linear-gradient(270deg, black, white, black);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+button {
+  font-size: 2rem;
+  padding: 1.5rem;
+  background-color: orange;
+  color: white;
+  border-radius: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: -5px -5px 5px darkorange;
+}
