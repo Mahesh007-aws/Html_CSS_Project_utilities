@@ -1,0 +1,102 @@
+/* Remove default margin and border properties */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Poppins&display=swap");
+
+/* Set the font family and size for the body */
+
+/* Center the content of the body using flex */
+body {
+  background: linear-gradient(29deg, blue, white);
+  font-family: "Ubuntu", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: azure;
+  /* text-align: justify; */
+}
+h1 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  color: blueviolet;
+  font-weight: 900;
+  text-shadow: -5px -5px 5px white;
+}
+.faq_container {
+  background-color: rgba(128, 128, 128, 0.356);
+  /* margin :auto; */
+  padding: 20px;
+  width: 50%;
+}
+.faq_title {
+  background-color: violet;
+  padding: 5px;
+  border-radius: 15px 15px 0 0;
+}
+.faq_text {
+  background-color: rgba(255, 255, 255, 0.351);
+  padding: 5px 15px 10px;
+  border-radius: 0 0 15px 15px;
+  color: #000;
+  display: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.faq {
+  /* background-color: antiquewhite; */
+  transition: 0.3s ease;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.faq_active {
+  position: relative;
+  margin: 20px 0;
+  transition: 0.3s ease;
+}
+.faq_active button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+}
+.faq_active button > i:last-child {
+  display: none;
+}
+
+p::before {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: darkblue;
+  font-size: 4rem;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.9;
+}
+.faq_text.active {
+  display: block;
+}
+
+@media only screen and (max-width: 500px) {
+  .faq_container {
+    width: 90%;
+    font-size: 3rem;
+    /* padding: 5px; */
+    background-color: aqua;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}

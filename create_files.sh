@@ -41,13 +41,12 @@ echo "/* Remove default margin and border properties */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Poppins&display=swap');
 
 /* Set the font family and size for the body */
-body {
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 16px;
-}
+
 
 /* Center the content of the body using flex */
 body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

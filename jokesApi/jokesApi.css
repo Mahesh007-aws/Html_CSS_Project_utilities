@@ -1,0 +1,55 @@
+/* Remove default margin and border properties */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Poppins&display=swap");
+
+/* Set the font family and size for the body */
+
+/* Center the content of the body using flex */
+body {
+  background-color: black;
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  background-color: #fff;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  border-radius: 30px;
+  padding: 10px;
+  display: grid;
+}
+h1 {
+  color: blueviolet;
+  text-transform: uppercase;
+}
+p {
+  font-size: 2rem;
+  /* margin: 1rem 0;   */
+}
+
+button {
+  font-size: 1.5rem;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90vw;
+  }
+ 
+}
