@@ -47,8 +47,11 @@ h1 {
   border-radius: 0 0 15px 15px;
   color: #000;
   display: none;
+
   letter-spacing: 3px;
   font-weight: bold;
+  transition-delay: 0.5s;
+  transition-property: linear;
 }
 .faq {
   /* background-color: antiquewhite; */
